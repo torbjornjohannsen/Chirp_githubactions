@@ -5,7 +5,7 @@ name: .NET Build and Test
 on:
   push:
     tags: 
-      - 'v*.*.*'
+      - 'v*'
 
 jobs:
   build:
