@@ -48,7 +48,7 @@ jobs:
           rm -r "$release_name"
 
       - name: Publish
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release
         with:
           files: "App*"
         env:
