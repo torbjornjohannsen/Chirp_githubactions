@@ -3,6 +3,7 @@
 # Check if an argument is passed, and validate it
 if [ -z "$1" ]; then # if no argument is passed
     pType="patch" # we default to incrementing the patch(last digit)
+    echo "No argument provided, so defaulting to incrementing patch(v*.*.x)"
 else
     pType="$1" #if we have an argument, then that's the patchtype we use
 fi
