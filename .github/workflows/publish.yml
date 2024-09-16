@@ -12,15 +12,12 @@ jobs:
         kind: ['linux', 'windows', 'macOS']
         include:
           - kind: linux
-            os: ubuntu-latest
             target: linux-x64
           - kind: windows
-            os: windows-latest
             target: win-x64
           - kind: macOS
-            os: macos-latest
             target: osx-x64
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -37,7 +34,7 @@ jobs:
           release_name="App-$tag-${{ matrix.target }}"
 
           # Build everything
-          dotnet publish src/Chirp.CLI/Chirp.CLI.csproj --runtime "${{ matrix.target }}" -c Release -o "$release_name"
+          dotnet publish src/Chirp.CLI/Chirp.CLI.csproj -c Release -o "$release_name"
 
           # Pack files
           if [ "${{ matrix.target }}" == "win-x64" ]; then
