@@ -1,4 +1,4 @@
-#!/bin/bash
+#Created with ChatGPT 
 
 # Fetch the latest tags from the remote
 git fetch --tags
