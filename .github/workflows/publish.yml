@@ -33,7 +33,7 @@ jobs:
           dotnet-version: 7.x.x
       
       - name: Test # ensures that the code passes all tests before we release it 
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test tests/*
       
       - name: Build
         shell: bash
