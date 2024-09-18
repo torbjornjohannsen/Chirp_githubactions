@@ -1,3 +1,5 @@
+# Initial code from the blogpost provided in the tips : https://patriksvensson.se/posts/2020/03/creating-release-artifacts-with-github-actions
+# and then modified to fit our requirements
 name: Publish
 
 on:
@@ -53,6 +55,6 @@ jobs:
       - name: Publish
         uses: softprops/action-gh-release@v2
         with:
-          files: "App*"
+          files: "Chirp*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
