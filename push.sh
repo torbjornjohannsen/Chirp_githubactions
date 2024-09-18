@@ -1,4 +1,4 @@
-#Created with ChatGPT, with some modifications and own comments for understanding
+#Created with ChatGPT, with some modifications and additional comments for understanding
 
 # Check if an argument is passed, and validate it
 if [ -z "$1" ]; then # if no argument is passed
