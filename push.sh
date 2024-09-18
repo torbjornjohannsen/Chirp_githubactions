@@ -62,7 +62,6 @@ git tag "$new_tag"
 # Push the new tag(ahead of the commit, since github will associate the first commit after a tag is pushed with that tag)
 git push origin "$new_tag"
 
-# Push the current commit to the remote branch (usually main or master)
-git push origin $(git rev-parse --abbrev-ref HEAD)
+
 
 echo "Created and pushed new tag: $new_tag"
